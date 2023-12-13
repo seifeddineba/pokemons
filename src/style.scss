@@ -44,9 +44,11 @@ button {
 
 .search-box {
   display: flex;
+  align-items: center;
   max-width: 300px; 
   margin: 0 auto;
-  padding-bottom:3rem ;
+  padding-bottom:1rem ;
+  gap:5px
 }
 
 
@@ -69,7 +71,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
@@ -82,6 +84,7 @@ button {
 
 .pokemon-card {
   width: calc(33.33% - 20px);
+  height: 360px;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 10px;
@@ -143,4 +146,22 @@ button {
   align-items: center;
   justify-content: space-between;
   width: 20%;
+}
+
+.types-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+  width: 60%;
+  flex-wrap: wrap;
+
+  span{
+    background-color: #5FBDFF;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }

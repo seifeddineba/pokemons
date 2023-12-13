@@ -4,4 +4,5 @@ export interface IButtonProps {
   color: string;
   type?: any;
   onClick?: () => void;
+  disabled?: boolean;
 }

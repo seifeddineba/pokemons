@@ -2,6 +2,7 @@ import Button from "./Button";
 import { IPaginationProps } from "../interfaces/IPaginationProps";
 
 function Pagination(props: IPaginationProps) {
+  const pageNumber = (props.filter.offset + 9) / props.filter.limit;
   return (
     <div className="pagination-box">
       <Button
@@ -9,8 +10,9 @@ function Pagination(props: IPaginationProps) {
         title="previous"
         name="previousPage"
         onClick={props.handlePreviousPage}
+        disabled={pageNumber <= 1 ? true : false}
       />
-      page: {props.filter.offset / props.filter.limit}
+      page: {pageNumber}
       <Button
         color="#3466AF"
         title="next"
